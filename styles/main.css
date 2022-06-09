@@ -1,0 +1,38 @@
+.main-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 22% 1fr 350px;
+    transition: all 0.5s ease;
+}
+.main-container--open {
+    display: grid;
+    grid-template-columns: 10% 1fr 350px;
+}
+
+.main-container .main-container__sidebar {
+    background-color: blue;
+    padding: 1rem;
+}
+.main-container .main-container__content {
+    padding: 1rem;
+    background-color: green;
+}
+.main-container .main-container__chat {
+    /* background-color: red; */
+}
+.button_floating {
+    display: none;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 1rem;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    position: absolute;
+}

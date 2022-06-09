@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/main2.css">
+
+</head>
+
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+        <button class="openbtnChat" onclick="openNav1()" id="openbtnChat">☰</button>
+        <h2>Collapsed Sidebar</h2>
+        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+    </div>
+
+    <div id="mySidebar1" class="sidebar1">
+        <!-- <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">×</a> -->
+        <iframe allow="microphone;" style="width: 350px;height: 96vh;"
+            src="https://console.dialogflow.com/api-client/demo/embedded/766ed2ac-4073-47be-986b-f6d080643936"></iframe>
+
+    </div>
+
+    <script>
+        const openbtnChat = document.getElementById("openbtnChat");
+        let openbtn = true;
+        openbtnChat.addEventListener("click", function () {
+            if (openbtn) {
+                openNav1();
+                openbtn = false;
+            } else {
+                closeNav1();
+                openbtn = true;
+
+            }
+        });
+        openNav();
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        function openNav1() {
+            document.getElementById("mySidebar1").style.width = "350px";
+            document.getElementById("main").style.marginRight = "350px";
+            document.getElementById("openbtnChat").style.right = "350px";
+        }
+
+        function closeNav1() {
+            document.getElementById("mySidebar1").style.width = "0";
+            document.getElementById("main").style.marginRight = "0";
+            document.getElementById("openbtnChat").style.right = "0";
+
+        }
+    </script>
+
+</body>
+
+</html>
